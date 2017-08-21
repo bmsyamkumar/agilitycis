@@ -1,0 +1,106 @@
+package tv.hooq.web.scripts;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import com.web.automation.accelerators.TestEngineWeb;
+import com.web.automation.fileutils.ExcelReader;
+import com.web.automation.logs.ExtentLogs;
+import com.web.automation.pages.SugarCRMPage;
+import com.web.automation.pages.SugarContactsInput;
+import com.web.automation.utilities.CommonVariables;
+
+import tv.hooq.web.workflows.HOOQInput;
+import tv.hooq.web.workflows.HOOQWorkflows;
+
+public class HOOQ_Web_LapsedUser_RentSection extends TestEngineWeb {
+
+	private String testCaseFailureReason = "";
+	private boolean testCaseStatus = true;
+	protected String sheetPath = System.getProperty("user.dir").replace("\\", "/") + "/testdata/TestData.xlsx";
+	protected String sheetName = "HOOQ_1";
+	Map<String, List<String>> testdata = null;
+	private ExtentLogs extenLogs = new ExtentLogs();
+	private HOOQInput testData=new HOOQInput();
+	private HOOQWorkflows HOOQ;
+	boolean isLoginSuccessfull,isLogOutSuccessfull;
+	public void TestCaseStatus(Boolean status, String reason) {
+		if (status == false) {
+			Assert.fail("Test Case Failed because - " + reason);
+		}
+	}
+	@BeforeMethod(alwaysRun = true)
+	@Parameters({"COUNTRY","USER_TYPE"})
+	public HOOQInput beforeMethod(String COUNTRY,String USER_TYPE) throws Throwable {
+		getTestData(COUNTRY,USER_TYPE);
+		HOOQ = new HOOQWorkflows(CommonVariables.CommonDriver.get());
+		return testData;
+	}
+	@Test(description = "HOOQ", groups = { "smoke", "regression" })
+	public void HOOQ_Web_LapsedUser_RentFilter() throws Throwable {
+		try {
+			extenLogs.info("HOOQ Web Test Script ","HOOQ Web Lapsed User Rent Filter Country : " + testData.COUNTRY);
+			//Login to HOOQ Application
+			isLoginSuccessfull=HOOQ.verifyLoginWithExistingAndInvalidEmails(testData.USER_ID,"valid", testData.USER_TYPE);
+			if(!isLoginSuccessfull){			
+				testCaseFailureReason = "Failed to login in the HOOQ application";				
+				extenLogs.fail("HOOQ Login ", testCaseFailureReason + "Failed Reason : Unable "
+						+ "to login");
+				testCaseStatus = false; 
+				throw new Exception();
+			}
+			else
+			{
+				//Successfully Login to HOOQ Web Application
+				extenLogs.pass("HOOQ Login", "Successfully Login to HOOQ Web Application using User ID : " +testData.USER_ID +" User Type : " + testData.USER_TYPE);
+				//Application Flow
+				
+				
+				
+				
+				
+				//Logout from HOOQ Web Application
+				isLogOutSuccessfull=HOOQ.logOut();
+				if(isLogOutSuccessfull){			
+					extenLogs.pass("HOOQ Logout", "Successfully Logout to HOOQ Web Application");
+				}
+				else
+				{
+					testCaseFailureReason = "Failed to Logout from HOOQ application";				
+					extenLogs.fail("HOOQ Logout ", testCaseFailureReason + "Failed Reason : Unable "
+							+ "to Logout");
+					testCaseStatus = false; 
+					throw new Exception();
+				}
+			}
+		}
+		catch (Exception e) {
+			testCaseFailureReason = "Failed to complete HOOQ Web ActiveUser Adding Favourite Movies";
+			String stackTrace = extenLogs.getStackTraceAsString("Test", testCaseFailureReason, e);
+			extenLogs.fail("HOOQ ", testCaseFailureReason + "Failed Reason : " + stackTrace);
+			testCaseStatus = false;
+		}
+		TestCaseStatus(testCaseStatus, testCaseFailureReason);
+	}
+	
+	
+	
+	private void getTestData(String strCountry,String strUserType) throws IOException {
+		try {
+			int intRowNo=HOOQInput.fnGetSheetRowNo(strCountry, strUserType);
+			testData.COUNTRY = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "COUNTRY");
+			testData.USER_TYPE = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "USER_TYPE");
+			testData.USER_ID = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "USER_ID");
+			testData.FREE_CONTENT = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "FREE_CONTENT");
+			testData.PREMIUM_CONTENT = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "PREMIUM_CONTENT");
+			testData.TV_SERIES = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "TV_SERIES");
+			testData.TVOD_CONTENT = ExcelReader.fn_GetCellData(this.sheetPath, this.sheetName, intRowNo, "TVOD_CONTENT");
+		} catch (Exception e) {
+			String stackTrace = extenLogs.getStackTraceAsString("Test", testCaseFailureReason, e);
+			extenLogs.fail("HOOQ ", testCaseFailureReason + "Failed Reason : " + stackTrace);
+		}
+	}
+}

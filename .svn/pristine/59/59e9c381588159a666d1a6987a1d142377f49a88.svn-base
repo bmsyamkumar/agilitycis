@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45725" started-at="2017-08-14T09:03:18Z" finished-at="2017-08-14T09:04:04Z">
+    <groups>
+      <group name="regression">
+        <method signature="HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="HOOQ_Web_ActiveUser_AddingFavouriteMovies" class="tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="HOOQ_Web_ActiveUser_AddingFavouriteMovies" class="tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Default test" duration-ms="45725" started-at="2017-08-14T09:03:18Z" finished-at="2017-08-14T09:04:04Z">
+      <class name="tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="beforeSuite" is-config="true" duration-ms="62" started-at="2017-08-14T14:33:18Z" finished-at="2017-08-14T14:33:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@173f73e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="beforeTest" is-config="true" duration-ms="1569" started-at="2017-08-14T14:33:18Z" finished-at="2017-08-14T14:33:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@173f73e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="beforeClass" is-config="true" duration-ms="21446" started-at="2017-08-14T14:33:20Z" finished-at="2017-08-14T14:33:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="beforeMethod" is-config="true" duration-ms="269" started-at="2017-08-14T14:33:41Z" finished-at="2017-08-14T14:33:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies() throws java.lang.Throwable]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-08-14T14:33:41Z" finished-at="2017-08-14T14:33:41Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'COUNTRY' is required by @Configuration on method beforeMethod but has not been marked @Optional or defined
+in C:\Users\E003900\AppData\Local\Temp\testng-eclipse-613378880\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'COUNTRY' is required by @Configuration on method beforeMethod but has not been marked @Optional or defined
+in C:\Users\E003900\AppData\Local\Temp\testng-eclipse-613378880\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:201)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="HOOQ_Web_ActiveUser_AddingFavouriteMovies" duration-ms="1" started-at="2017-08-14T14:33:41Z" description="HOOQ" finished-at="2017-08-14T14:33:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HOOQ_Web_ActiveUser_AddingFavouriteMovies -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="afterMethod" is-config="true" duration-ms="357" started-at="2017-08-14T14:33:41Z" finished-at="2017-08-14T14:33:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies() throws java.lang.Throwable]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=HOOQ_Web_ActiveUser_AddingFavouriteMovies status=SKIP method=HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="afterClass" is-config="true" duration-ms="22025" started-at="2017-08-14T14:33:42Z" finished-at="2017-08-14T14:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="afterTest" is-config="true" duration-ms="28" started-at="2017-08-14T14:34:04Z" finished-at="2017-08-14T14:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]" name="afterSuite" is-config="true" duration-ms="89" started-at="2017-08-14T14:34:04Z" finished-at="2017-08-14T14:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

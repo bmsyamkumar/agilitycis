@@ -1,0 +1,11 @@
+package tv.hooq.web.testObjects;
+
+import org.openqa.selenium.By;
+public class ContactPageLocators {
+	
+	//Home page 
+	
+	public static By headerContactUs = By.xpath(".//*[@id='contact-us']");  
+	
+	
+}

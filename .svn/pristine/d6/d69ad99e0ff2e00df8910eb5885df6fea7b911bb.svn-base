@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <test verbose="2" name="Default test">
+	  <parameter name="COUNTRY" value="IN" />
+	  <parameter name="USER_TYPE" value="FREE" />
+      <classes>
+      <class name="tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

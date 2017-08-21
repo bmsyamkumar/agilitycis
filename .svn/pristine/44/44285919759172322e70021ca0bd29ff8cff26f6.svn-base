@@ -1,0 +1,4 @@
+<h2>Groups used for this test run</h2><table border="1">
+<tr> <td align="center"><b>Group name</b></td><td align="center"><b>Methods</b></td></tr><tr><td>regression</td><td>HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]<br/></td></tr>
+<tr><td>smoke</td><td>HOOQ_Web_ActiveUser_AddingFavouriteMovies.HOOQ_Web_ActiveUser_AddingFavouriteMovies()[pri:0, instance:tv.hooq.web.scripts.HOOQ_Web_ActiveUser_AddingFavouriteMovies@51f116b8]<br/></td></tr>
+</table>

@@ -1,0 +1,2 @@
+TestcaseName,ItrationCount,JiraTCID,Status,DeviceName,Method Description,JiraTestCaseId,Owner,TestCaseType
+com.web.poc.script.AgilityCIS_Automation_Demo.AgilityCIS_Automation_Demo,1,,SKIP,windows-firefox,ZAPPY,null,null,null

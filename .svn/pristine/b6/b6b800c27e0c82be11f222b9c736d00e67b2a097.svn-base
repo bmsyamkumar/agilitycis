@@ -1,0 +1,113 @@
+package tv.hooq.web.workflows;
+
+public class HOOQInput {
+	public String COUNTRY;
+	public String USER_TYPE;
+	public String USER_ID;
+	public String FREE_CONTENT;
+	public String PREMIUM_CONTENT;
+	public String TV_SERIES;
+	public String TVOD_CONTENT;
+	
+	public static int fnGetSheetRowNo(String strCountry,String strUserType)
+	{
+		int intRowNo=0;
+		if(strCountry.toLowerCase().contains("in"))
+		{
+			if(strUserType.toLowerCase().contains("free"))
+			{
+				intRowNo=2;
+			}
+			else if(strUserType.toLowerCase().contains("active"))
+			{
+				intRowNo=3;
+			}
+			else if(strUserType.toLowerCase().contains("lapsed"))
+			{
+				intRowNo=4;
+			}
+			else if(strUserType.toLowerCase().contains("anonymous"))
+			{
+				intRowNo=5;
+			}
+		}
+		else if(strCountry.toLowerCase().contains("ph"))
+		{
+			if(strUserType.toLowerCase().contains("free"))
+			{
+				intRowNo=6;
+			}
+			else if(strUserType.toLowerCase().contains("active"))
+			{
+				intRowNo=7;
+			}
+			else if(strUserType.toLowerCase().contains("lapsed"))
+			{
+				intRowNo=8;
+			}
+			else if(strUserType.toLowerCase().contains("anonymous"))
+			{
+				intRowNo=9;
+			}
+		}
+		else if(strCountry.toLowerCase().contains("th"))
+		{
+			if(strUserType.toLowerCase().contains("free"))
+			{
+				intRowNo=10;
+			}
+			else if(strUserType.toLowerCase().contains("active"))
+			{
+				intRowNo=11;
+			}
+			else if(strUserType.toLowerCase().contains("lapsed"))
+			{
+				intRowNo=12;
+			}
+			else if(strUserType.toLowerCase().contains("anonymous"))
+			{
+				intRowNo=13;
+			}
+		}
+		else if(strCountry.toLowerCase().contains("id"))
+		{
+			if(strUserType.toLowerCase().contains("free"))
+			{
+				intRowNo=14;
+			}
+			else if(strUserType.toLowerCase().contains("active"))
+			{
+				intRowNo=15;
+			}
+			else if(strUserType.toLowerCase().contains("lapsed"))
+			{
+				intRowNo=16;
+			}
+			else if(strUserType.toLowerCase().contains("anonymous"))
+			{
+				intRowNo=17;
+			}
+		}
+		else if(strCountry.toLowerCase().contains("sg"))
+		{
+			if(strUserType.toLowerCase().contains("free"))
+			{
+				intRowNo=18;
+			}
+			else if(strUserType.toLowerCase().contains("active"))
+			{
+				intRowNo=19;
+			}
+			else if(strUserType.toLowerCase().contains("lapsed"))
+			{
+				intRowNo=20;
+			}
+			else if(strUserType.toLowerCase().contains("anonymous"))
+			{
+				intRowNo=21;
+			}
+		}
+		return intRowNo;
+	}
+	
+}

@@ -1,0 +1,4 @@
+21/08/2017 14:46:14	INFO 	AgilityCIS_Automation_Demo_12		Staring the class
+21/08/2017 14:46:14	DEBUG	AgilityCIS_Automation_Demo_12		In Before Class method inside TestEngineWeb.
+21/08/2017 14:46:44	INFO 	AgilityCIS_Automation_Demo_12		Info: navigating URL : 'http://signupdemo.agilitycis.com/'
+21/08/2017 14:47:05	INFO 	AgilityCIS_Automation_Demo_12		Stopping the class
